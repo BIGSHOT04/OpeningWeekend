@@ -14,5 +14,20 @@ namespace OpeningWeekend
         public string forgalmazo { get; set; }
         public int Bevétel { get; set; }
         public int látogatok { get; set; }
+
+        public film (string sor)
+        {
+            string[] t = sor.Split(';');
+            OGCim = t[0];
+            magyarcim = t[1];   
+            Bemutato=t[2];
+            forgalmazo = t[3];
+            Bevétel = int.Parse(t[4]);
+            látogatok = int.Parse(t[5]);
+        }
+
+
+
+
     }
 }
