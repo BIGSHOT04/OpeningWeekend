@@ -13,12 +13,19 @@ namespace OpeningWeekend
         static void Main(string[] args)
         {
 
+            List<film> films = new List<film>();
+            foreach (var sor in File.ReadLines("nyitohetvege.txt").Skip(1))
+
+            {
+                films.Add(new film(sor));
+            }
+            Console.WriteLine($"Filemk az állományban:{films.Count}db");
 
 
 
 
 
-
+            Console.ReadKey();
         }
     }
 }
