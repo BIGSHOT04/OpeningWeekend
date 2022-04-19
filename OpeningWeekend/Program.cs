@@ -31,6 +31,14 @@ namespace OpeningWeekend
             }
             Console.WriteLine($"Az uip duna film forgalmazó elsö heti bevétele: {uip.ToString("C2")}");
 
+            film legtobbLatogatosFilm = films.OrderBy(f => f.látogatok).Last();
+
+            Console.WriteLine($"Legtöbb látogató az első héten:");
+            Console.WriteLine($"Eredeti cím: {legtobbLatogatosFilm.OGCim}");
+            Console.WriteLine($"Magyar cím: {legtobbLatogatosFilm.magyarcim}");
+            Console.WriteLine($"Forgalmazó: {legtobbLatogatosFilm.forgalmazo}");
+            Console.WriteLine($"Bevétel az első héten: {legtobbLatogatosFilm.Bevétel.ToString("C2")}");
+            Console.WriteLine($"Látogatók száma: {legtobbLatogatosFilm.látogatok} fő");
 
 
             Console.ReadKey();
